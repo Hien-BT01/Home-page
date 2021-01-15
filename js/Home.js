@@ -1,0 +1,69 @@
+$('.owl-carousel1').owlCarousel({
+    loop:true,
+    margin:30,
+    dots:true,
+    autoplay:true,
+    autoplayHoverPause:true,
+    autoplayTimeout:2000,
+    responsive:{
+        0:{
+            items:1,
+            dots:false
+        },
+        767:{
+            items:1
+        },
+        1200:{
+            items:1
+        }
+    }
+})
+$('.owl-carousel0').owlCarousel({
+    loop:true,
+    margin:30,
+    dots:false,
+    autoplay:true,
+    autoplayHoverPause:true,
+    autoplayTimeout:2000,
+    responsive:{
+        0:{
+            items:1,
+            dots:false
+        },
+        767:{
+            items:1
+        },
+        1200:{
+            items:1
+        }
+    }
+})
+$('.owl-carousel2').owlCarousel({
+    loop:true,
+    margin:30,
+    dots:false,
+    autoplay:true,
+    autoplayHoverPause:true,
+    autoplayTimeout:2000,
+    responsive:{
+        0:{
+            items:3,
+            dots:false
+        },
+        767:{
+            items:5
+        },
+        1200:{
+            items:7 
+        }
+    }
+})
+let getLink = document.querySelectorAll(".link-book")
+getLink.forEach(link => {
+    link.addEventListener("mouseleave",(e) => {
+        link.classList.add("out-center");
+        setTimeout(() => {
+            link.classList.remove("out-center");
+        },500)
+    })
+})
